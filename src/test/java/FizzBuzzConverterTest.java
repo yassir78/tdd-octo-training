@@ -6,47 +6,46 @@ class FizzBuzzConverterTest {
 
     @Test
     void shouldReturnFizzWhenInputIs3() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("Fizz", fizzBuzzConverter.convert(3));
+        testGenerator(3, "Fizz");
     }
 
     @Test
     void shouldReturnFizzWhenInputIs5() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("Buzz", fizzBuzzConverter.convert(5));
+        testGenerator(5, "Fizz");
+
     }
 
 
     @Test
     void shouldReturnFizzWhenNumberIsMultipleOf3() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("Fizz", fizzBuzzConverter.convert(6));
+        testGenerator(6, "Fizz");
     }
 
     @Test
     void shouldReturnFizzBuzzWhenInputIs15() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("FizzBuzz", fizzBuzzConverter.convert(15));
+        testGenerator(15, "FizzBuzz");
     }
 
     @Test
     void shouldReturnFizzBuzzWhenInputIsMultipleOf15() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("FizzBuzz", fizzBuzzConverter.convert(30));
+        testGenerator(30, "FizzBuzz");
     }
 
     @Test
     void shouldReturnNumberWhenInputIsMultipleOf5() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("Buzz", fizzBuzzConverter.convert(10));
+        testGenerator(5, "Buzz");
     }
 
     @Test
     void shouldReturnNumberWhenInputIsNormalNumber() {
-        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
-        assertEquals("1", fizzBuzzConverter.convert(1));
+        testGenerator(1, "1");
     }
 
+
+    private void testGenerator(int input, String expected) {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals(expected, fizzBuzzConverter.convert(input));
+    }
 
 
 }
