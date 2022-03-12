@@ -16,4 +16,17 @@ class NumberToListConverterTest {
                 executable);
         assertEquals("Number cannot be 0", exception.getMessage());
     }
+
+    @Test
+    void shouldThrowExceptionWhenInputIsNegative() {
+        Executable executable = () -> NumberToListConverter.convert(-1);
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                executable);
+        assertEquals("Number cannot be negative", exception.getMessage());
+    }
+
+    
+
+
 }
