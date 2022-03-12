@@ -33,8 +33,6 @@ class NumberToListConverterTest {
         assertEquals(List.of(1), NumberToListConverter.convert(1));
     }
 
-
-
     @Test
     void shouldReturnListContainingNumbersFrom1To2WhenInputIs2() {
         assertEquals(List.of(1, 2), NumberToListConverter.convert(2));
