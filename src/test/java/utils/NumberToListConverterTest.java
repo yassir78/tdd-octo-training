@@ -3,6 +3,8 @@ package utils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -26,7 +28,10 @@ class NumberToListConverterTest {
         assertEquals("Number cannot be negative", exception.getMessage());
     }
 
-    
+    @Test
+    void shouldReturnListContaining1WhenInputIs1() {
+        assertEquals(List.of(1), NumberToListConverter.convert(1));
+    }
 
 
 }
