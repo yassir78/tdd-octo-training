@@ -34,5 +34,17 @@ class FizzBuzzConverterTest {
         FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
         assertEquals("FizzBuzz", fizzBuzzConverter.convert(30));
     }
-    
+
+    @Test
+    void shouldReturnNumberWhenInputIsMultipleOf5() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals("Buzz", fizzBuzzConverter.convert(10));
+    }
+
+    @Test
+    void shouldReturnNumberWhenInputIsNormalNumber() {
+        FizzBuzzConverter fizzBuzzConverter = new FizzBuzzConverter();
+        assertEquals("1", fizzBuzzConverter.convert(1));
+    }
+
 }
